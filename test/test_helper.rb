@@ -30,4 +30,7 @@ class ActionDispatch::IntegrationTest
                                           remember_me: remember_me } }
 
   end
+  def log_out_user
+    session.delete(:user_id)
+  end
 end
